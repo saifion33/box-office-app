@@ -9,6 +9,7 @@ import {
 import ErrorPage from './error/ErrorPage';
 import Home from './pages/Home';
 import Starred from './pages/Starred';
+import Show from './pages/Show';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/show/:id',
+    element: <Show />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

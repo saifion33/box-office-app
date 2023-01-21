@@ -16,14 +16,11 @@ const Home = () => {
         fetchData(`search/${searchOption}?q=${input}`).then(result => { setResults(result); setIsLoading(false); })
 
     }
-    const renderResults = () => {
+    const renderResults = (results) => {
         if (results && results.length === 0) {
             return <div className='text-3xl font-bold text-purple-600 text-center'>Not Found</div>
         }
         if (results && results.length > 0) {
-
-            // const searchResultType = results[0].show ? 'show' : 'person';
-            // return results.map(item => <div key={item[searchResultType].id}>{item[searchResultType]?.name}<img className='w-48' src={item[searchResultType].image?.original} /></div>)
             return results[0].show ? <ShowsContainer shows={results} /> : <ActorsContainer actors={results} />
         }
         return null
@@ -34,8 +31,7 @@ const Home = () => {
             {isLoading && <div className='flex justify-center'><img src={loadingSpinner} /></div>}
 
             <div className='flex flex-wrap gap-3'>
-                {renderResults()}
-
+                {renderResults(results)}
             </div>
 
         </div>
