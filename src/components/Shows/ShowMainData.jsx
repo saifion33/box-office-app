@@ -1,15 +1,19 @@
 import React from 'react'
+import starImage from '../../assets/icons/star-icon.png'
 
 const ShowMainData = ({ name, image, rating, summary, tags }) => {
   return (
-    <div className='flex p-4 flex-wrap'>
+    <div className='flex p-4 '>
       <div className=''>
         <img className='w-60 rounded-2xl ' src={image?.original} alt={name} />
       </div>
       <div className='w-fit p-3' >
         <div className='flex gap-4 items-center'>
           <h1 className='text-xl font-bold'>{name}</h1>
-          <p>| {rating?.average}</p>
+          <div className='flex items-center'>
+            <img className='w-4 h-4' src={starImage} alt="star" />
+            <p className='border-l-2 border-gray-800 px-2 mx-2 py-0 '>{rating?.average}</p>
+          </div>
         </div>
         <div>
           <p className='py-4'>

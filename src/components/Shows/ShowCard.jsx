@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import starImage from '../../assets/icons/star-icon.png'
 
-const ShowCard = ({ show, starShow }) => {
+const ShowCard = ({ show, starShow, isStarred }) => {
     const summary = show.summary?.replace(/<\W*\w*>/g, '').split(' ').slice(0, 15).join(' ')
 
     return (
@@ -12,7 +13,9 @@ const ShowCard = ({ show, starShow }) => {
             <p className='py-3 text-gray-700'>{summary} ...</p>
             <div className='flex justify-between mt-auto'>
                 <Link to={`/show/${show.id}`} className='bg-purple-600 text-white px-3 rounded-md py-1 mr-auto'>Read More</Link>
-                <button className='' onClick={() => { starShow(show.id) }}>Star show</button>
+                <div className='border-2 border-purple-600 rounded-full px-3 bg-gray-200 flex items-center cursor-pointer' onClick={() => { starShow(show.id) }}>
+                    {isStarred ? <img className='w-5 h-5' src={starImage} alt="star" /> : 'Star Me'}
+                </div>
             </div>
         </div>
     )
