@@ -4,10 +4,11 @@ import SerachContainer from '../components/searchBox/SerachContainer'
 import ShowsContainer from '../components/Shows/ShowsContainer'
 import loadingSpinner from '../assets/Iphone-spinner-2.gif'
 import { fetchData } from '../utils/util_Snippets'
+import { useLastQuery } from '../utils/custom-hooks'
 
 const Home = () => {
 
-    const [input, setInput] = useState('')
+    const [input, setInput] = useLastQuery()
     const [searchOption, setSearchOption] = useState('shows');
     const [isLoading, setIsLoading] = useState(false)
     const [results, setResults] = useState(null)
