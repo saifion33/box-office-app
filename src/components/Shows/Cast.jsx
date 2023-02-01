@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Cast = ({ cast }) => {
-  console.log(cast)
   return (
     <div>
       <h1 className='text-xl font-bold my-6'>Cast</h1>
