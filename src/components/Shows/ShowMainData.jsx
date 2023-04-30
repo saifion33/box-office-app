@@ -3,9 +3,9 @@ import starImage from '../../assets/icons/star-icon.png'
 
 const ShowMainData = ({ name, image, rating, summary, tags }) => {
   return (
-    <div className='flex p-4 '>
+    <div className='flex flex-col md:flex-row p-4 '>
       <div className=''>
-        <img className='w-60 rounded-2xl ' src={image?.original} alt={name} />
+        <img className='w-full md:w-60 rounded-2xl ' src={image?.original} alt={name} />
       </div>
       <div className='w-fit p-3' >
         <div className='flex gap-4 items-center'>
@@ -22,7 +22,7 @@ const ShowMainData = ({ name, image, rating, summary, tags }) => {
         </div>
         <div className='flex gap-3'>
           Tags:
-          {tags?.map(tag => <p key={tag} className='bg-purple-600 py-1 px-2 rounded-full w-fit text-stone-100'>{tag}</p>)}
+          {tags?.map(tag => <p key={tag} className='bg-purple-600 py-1 px-2 rounded-full w-fit text-stone-100 flex items-center'>{tag}</p>)}
         </div>
       </div>
     </div>

@@ -20,7 +20,6 @@ const Show = () => {
   }
   return (
     <div className='p-4'>
-
       <ShowMainData name={show?.name} image={show?.image} summary={show?.summary} tags={show?.genres} rating={show?.rating} />
       <Details status={show?.status} network={show?.network} premiered={show?.premiered} />
       <Seasons seasons={show?._embedded.seasons} />

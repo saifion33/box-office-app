@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const ActorCard = ({ actor }) => {
-    useEffect(() => {
-        console.log(actor)
-    }, [])
+
     return (
         <div className='bg-white flex flex-col shadow-lg w-full max-w-xs rounded text-black p-3 transition-all duration-1000 border-2 border-white hover:border-2  hover:border-purple-600'>
-            <img className='w-[230px] h-64' src={actor?.image?.original} alt={actor.name} />
-
+            <div className=''>
+                <img className='w-[230px] h-64 mx-auto' src={actor?.image?.original} alt={actor.name} />
+            </div>
             <h1 className='text-lg font-bold text-purple-600 py-3'>{actor.name}</h1>
             <p>{actor.country?.name}</p>
             <div className='flex justify-between'>

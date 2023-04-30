@@ -43,6 +43,19 @@ export const useLastQuery = (key = 'lastQuery') => {
     }
     return [input, setPersistedInput]
 }
+
+export const useLastSearchResult = (key = 'lastResult') => {
+    const [result, setResult] = useState(() => {
+        const persisted = sessionStorage.getItem(key);
+        return persisted?JSON.parse(persisted):[]
+    })
+    const setPersistedResult = (newState) => {
+        setResult(newState)
+        sessionStorage.setItem(key, JSON.stringify(newState));
+    }
+    return [result,setPersistedResult]
+}
+
 const reducer = (prevState, action) => {
     switch (action.type) {
         case 'FETCH_SUCCESS':
