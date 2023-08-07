@@ -16,7 +16,7 @@ The Box Office App is a user-friendly and feature-rich application that allows u
 
 ## See Live
 
-- [Live site]()
+- [Live site](https://box-office-webapp.netlify.app/)
 
 ## Screenshot
  ![screenshot](https://raw.githubusercontent.com/saifion33/box-office-app/master/public/screenshots/Screenshot%202023-08-07%20at%2015-56-48%20Box%20Office%20Azeem%20Saifi%20%5Bphotoutils.com%5D.png)
