@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {HiStar,HiOutlineStar} from 'react-icons/hi'
 import starImage from '../../assets/icons/star-icon.png'
 
 const ShowCard = ({ show, starShow, isStarred }) => {
@@ -13,8 +14,8 @@ const ShowCard = ({ show, starShow, isStarred }) => {
             <p className='py-3 text-gray-700'>{summary} ...</p>
             <div className='flex justify-between mt-auto'>
                 <Link to={`/show/${show.id}`} className='bg-purple-600 text-white px-3 rounded-md py-1 mr-auto'>Read More</Link>
-                <div className='border-2 border-purple-600 rounded-full px-3 bg-gray-200 flex items-center cursor-pointer' onClick={() => { starShow(show.id) }}>
-                    {isStarred ? <img className='w-5 h-5' src={starImage} alt="star" /> : 'Star Me'}
+                <div role='button' className='text-2xl' onClick={() => { starShow(show.id) }}>
+                    {isStarred ? <HiStar className='text-yellow-400 drop-shadow-xl' />:<HiOutlineStar  />}
                 </div>
             </div>
         </div>
