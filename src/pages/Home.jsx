@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ActorsContainer from '../components/Actors/ActorsContainer'
 import SerachContainer from '../components/searchBox/SerachContainer'
 import ShowsContainer from '../components/Shows/ShowsContainer'
-import loadingSpinner from '../assets/Iphone-spinner-2.gif'
+import loadingSpinner from '../assets/loading-spinner.gif'
 import { useSearchState } from '../context/Search.context'
 
 const Home = () => {

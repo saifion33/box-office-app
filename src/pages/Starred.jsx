@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import ShowsContainer from '../components/Shows/ShowsContainer'
 import { useShows } from '../utils/custom-hooks'
 import { fetchData } from '../utils/util_Snippets'
-import loadingSpinner from '../assets/Iphone-spinner-2.gif'
+import loadingSpinner from '../assets/loading-spinner.gif'
 
 const Starred = () => {
   const [starredShows] = useShows()

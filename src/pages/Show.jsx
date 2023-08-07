@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import loadingSpinner from '../assets/Iphone-Spinner-2.gif'
+import loadingSpinner from '../assets/loading-spinner.gif'
 import ShowMainData from '../components/Shows/ShowMainData'
 import Details from '../components/Shows/Details'
 import Seasons from '../components/Shows/Seasons'
